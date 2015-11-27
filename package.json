@@ -1,0 +1,24 @@
+{
+  "name": "pipes.connector.reddit",
+  "version": "0.1.0",
+  "description": "Reddit connector for Simple Data Pipe tool",
+  "main": "./server/connectors/reddit",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibm-cds-labs/pipes.connector.reddit"
+  },
+  "keywords": [
+    "pipes",
+    "dataworks",
+    "dashDb",
+    "Cloudant",
+    "Data Movement"
+  ],
+  "dependencies": {
+    "pipes-sdk": "^0.1.0"
+  },
+  "author": "david_taieb@us.ibm.com",
+  "license": "Apache-2.0",
+  "readmeFilename": "README.md"
+}
