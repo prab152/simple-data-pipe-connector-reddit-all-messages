@@ -16,7 +16,7 @@ or
 
 ##### Install the Reddit connector
 
-Install the connector using [these instructions](https://github.com/ibm-cds-labs/pipes/wiki/Installing-a-Simple-Data-Pipe-Connector) into the Simple Data Pipe.  
+Install the connector using [these instructions](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector) into the Simple Data Pipe.  
 
 ### Using the Reddit Connector 
 To configure and run a pipe
