@@ -1,18 +1,16 @@
 {
-  "name": "pipes.connector.reddit",
+  "name": "simple-data-pipe-connector-reddit",
   "version": "0.1.0",
-  "description": "Reddit connector for Simple Data Pipe tool",
+  "description": "Reddit connector for Simple Data Pipe",
   "main": "./lib",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/ibm-cds-labs/pipes.connector.reddit"
+    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-reddit"
   },
   "pipes-connector-name": "reddit",
   "keywords": [
     "pipes",
-    "dataworks",
-    "dashDb",
     "Cloudant",
     "Data Movement"
   ],
@@ -21,7 +19,7 @@
     "bluemix-helper-config": "^0.1.9",
     "lodash": "^3.10.1",
     "node-schedule": "~0.2.9",
-    "pipes-sdk": "^0.1.0",
+    "simple-data-pipe-sdk": "git://github.com/ibm-cds-labs/simple-data-pipe-sdk.git",
     "request": "^2.67.0",
     "when": "~3.7.3"
   },

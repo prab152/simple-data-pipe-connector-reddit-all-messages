@@ -1,4 +1,4 @@
-# pipes.connector.reddit
+# Simple Data Pipe Connector for Reddit
 
 ##### [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for [Reddit AMA](https://www.reddit.com/r/ama)
 
