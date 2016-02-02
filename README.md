@@ -1,8 +1,8 @@
-# pipes.connector.reddit
+# Simple Data Pipe Connector for Reddit
 
 ##### [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for [Reddit AMA](https://www.reddit.com/r/ama)
 
-This repository contains the Reddit AMA Simple Data Pipe connector. The connector should be used with latest version of the Simple Data Pipe implementing the [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk).
+This repository contains the Reddit AMA Simple Data Pipe connector. The connector should be used with latest version of the Simple Data Pipe implementing the [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk).
 
 ### Pre-requisites
 
