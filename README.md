@@ -4,14 +4,18 @@
 
 ### Pre-requisites
 
-##### General 
-This connector requires the [Watson Tone Analyzer service](https://console.ng.bluemix.net/catalog/services/tone-analyzer) in IBM Bluemix to be bound to the Simple Data Pipe application. To find and use the Tone Analyzer service one of the following should be in place:
+##### Services
 
-* Tone Analyzer service should be named __tone analyzer__
+This connector requires the [Watson Tone Analyzer service](https://console.ng.bluemix.net/catalog/services/tone-analyzer) in IBM Bluemix to be bound to the Simple Data Pipe application. 
 
-or
+To provision a Tone Analyzer service instance in Bluemix run the follow command:
 
-* Simple Data Pipe application should have a [USER-DEFINED Environment Variable](https://www.ng.bluemix.net/docs/manageapps/depapps.html#ud_env) with name __WATSON_TONE_ANALYZER__ and value set to the name of the Tone Analyzer service
+````
+  cf create-service tone_analyzer experimental "tone analyzer"
+````
+
+If you want to re-use an existing instance that is not named `tone analyzer`, create a [USER-DEFINED Environment Variable](https://www.ng.bluemix.net/docs/manageapps/depapps.html#ud_env) in the Simple Data Pipe application named __WATSON_TONE_ANALYZER__ and set its value to the name of the existing Tone Analyzer service.
+
 
 
 ##### Install the Reddit connector
