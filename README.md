@@ -28,20 +28,11 @@ To configure and run a pipe
 1. Open the Simple Data Pipe web console.
 2. Select __Create A New Pipe__.
 3. Select __Reddit AMA__ for the __Type__ when creating a new pipe  
-4. In the Connect page, enter the __URL__ taken from the Reddit AMA URL (with _.json_ appended).  
-  For example, with AMA  
+4. In the Connect page, enter the __URL__ taken from the Reddit AMA URL, for example
 
   ```  
   https://www.reddit.com/r/IAmA/comments/3ilzey/were_a_bunch_of_developers_from_ibm_ask_us/
   ```  
-  
-  enter the URL as  
-  
-  ```  
-  https://www.reddit.com/r/IAmA/comments/3ilzey/were_a_bunch_of_developers_from_ibm_ask_us.json
-  ```  
-  
-  Notice the _.json_ appended at the end.
 
 #### License 
 
