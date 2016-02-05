@@ -4,19 +4,23 @@
 
 ### Pre-requisites
 
+##### Deploy the Simple Data Pipe
+
+  [Deploy the Simple Data Pipe in Bluemix](https://github.com/ibm-cds-labs/simple-data-pipe) using the Deploy to Bluemix button or manually.
+
 ##### Services
 
 This connector requires the [Watson Tone Analyzer service](https://console.ng.bluemix.net/catalog/services/tone-analyzer) in IBM Bluemix to be bound to the Simple Data Pipe application. 
 
-To provision a Tone Analyzer service instance in Bluemix run the follow command:
+Provision and bind a _Watson Tone Analyzer service_ instance using the Bluemix web console ([Show me how](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/How-do-I-provision-and-bind-a-service-instance-in-Bluemix-using-the-Bluemix-web-console)) or run the following Cloud Foundry commands ([Show me how](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/How-do-I-provision-and-bind-a-service-instance-in-Bluemix-using-the-Cloud-Foundry-command-line-client)):
 
 ````
-  cf create-service tone_analyzer experimental "tone analyzer"
+  $ cf create-service tone_analyzer experimental "tone analyzer"
+  $ cf bind-service simple-data-pipe "tone_analyzer"
+  $ cf restage simple-data-pipe
 ````
 
-> Pro Tip: If you want to re-use an existing instance that is not named `tone analyzer`, create a [USER-DEFINED Environment Variable](https://www.ng.bluemix.net/docs/manageapps/depapps.html#ud_env) in the Simple Data Pipe application named __WATSON_TONE_ANALYZER__ and set its value to the name of the existing Tone Analyzer service.
-
-
+> Pro Tip: If you want to re-use an existing instance that is not named `tone analyzer`, create a [USER-DEFINED Environment Variable](https://www.ng.bluemix.net/docs/manageapps/depapps.html#ud_env) in the Simple Data Pipe application named __WATSON_TONE_ANALYZER__ and set its value to the name of the existing Tone Analyzer service. [(Show me how)](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/How-do-I-create-a-user-defined-environment-variable-in-Bluemix)
 
 ##### Install the Reddit connector
 
