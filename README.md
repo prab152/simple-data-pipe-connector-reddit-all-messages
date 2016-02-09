@@ -12,7 +12,7 @@
 
 This connector requires the [Watson Tone Analyzer service](https://console.ng.bluemix.net/catalog/services/tone-analyzer) in IBM Bluemix to be bound to the Simple Data Pipe application. 
 
-Provision and bind a _Watson Tone Analyzer service_ instance using the Bluemix web console ([Show me how](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/How-do-I-provision-and-bind-a-service-instance-in-Bluemix-using-the-Bluemix-web-console)) or run the following Cloud Foundry commands ([Show me how](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/How-do-I-provision-and-bind-a-service-instance-in-Bluemix-using-the-Cloud-Foundry-command-line-client)):
+[Provision and bind](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Provision-and-bind-a-service-instance-in-Bluemix) a _Watson Tone Analyzer service_ instance. If you're using Cloud Foundry, do so by running the following commands:
 
 ````
   $ cf create-service tone_analyzer experimental "tone analyzer"
@@ -20,8 +20,8 @@ Provision and bind a _Watson Tone Analyzer service_ instance using the Bluemix w
   $ cf restage simple-data-pipe
 ````
 
-> Pro Tip: If you want to re-use an existing instance that is not named `tone analyzer`, create a [USER-DEFINED Environment Variable](https://www.ng.bluemix.net/docs/manageapps/depapps.html#ud_env) in the Simple Data Pipe application named __WATSON_TONE_ANALYZER__ and set its value to the name of the existing Tone Analyzer service. [(Show me how - Bluemix)](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/How-do-I-create-a-user-defined-environment-variable-in-Bluemix-using-the-Bluemix-web-console)
-[(Show me how - Cloud Foundry client)](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/How-Do-I--create-a-user-defined-environment-variable-in-Bluemix-using-the-Cloud-Foundry-command-line-client)
+> Pro Tip: If you want to re-use an existing instance that is not named `tone analyzer`, create a [USER-DEFINED Environment Variable](https://www.ng.bluemix.net/docs/manageapps/depapps.html#ud_env) in the Simple Data Pipe application named __WATSON_TONE_ANALYZER__ and set its value to the name of the existing Tone Analyzer service. [Read how](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Create-a-user-defined-environment-variable-in-Bluemix).
+
 
 ##### Install the Reddit connector
 
