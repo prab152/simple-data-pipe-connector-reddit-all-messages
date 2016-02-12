@@ -24,6 +24,7 @@
         <button type="button" class="button_primary" ng-class="{'disabled':pipeConnectionForm.$invalid || loadama}"
             ng-click="loadama = true;loadAMA()"
             ng-disabled="pipeConnectionForm.$invalid || loadama">{{ loadama ? 'Connecting...' : 'Connect to AMA' }}</button>
+         <p class="type_copy type_mark" id="WaitAMALoadBody"></p>
       </div>
     </form>
     
