@@ -15,8 +15,8 @@ This connector requires the [Watson Tone Analyzer service](https://console.ng.bl
 [Provision and bind](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Provision-and-bind-a-service-instance-in-Bluemix) a _Watson Tone Analyzer service_ instance. If you're using Cloud Foundry, do so by running the following commands:
 
 ````
-  $ cf create-service tone_analyzer experimental "tone analyzer"
-  $ cf bind-service simple-data-pipe "tone_analyzer"
+  $ cf create-service tone_analyzer beta "tone analyzer"
+  $ cf bind-service simple-data-pipe "tone analyzer"
   $ cf restage simple-data-pipe
 ````
 
