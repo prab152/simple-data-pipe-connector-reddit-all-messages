@@ -17,13 +17,14 @@
         <select class="input_select" id="selected_table" name="selectedTable" ng-model="selectedPipe.selectedTableId">
             <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.labelPlural || table.name}}</option>
         </select>
-        <br>
+    </div>
+    <div class="form_field">
         <label>
         	<input type="radio" name="outputFormat" value="JSON" ng-model="selectedPipe.outputFormat" />
         	JSON
     	</label>
     	<label>
-        	<input type="radio" name="outputFormat" value="JSON_flat" ng-model="selectedPipe.outputFormat" checked/>
+        	<input type="radio" name="outputFormat" value="JSON_flat" ng-model="selectedPipe.outputFormat"/>
         	JSON flattened (for processing with Analytics for Apache Spark)
     	</label>
 
