@@ -14,10 +14,12 @@
 
 <div class="form_standard">
     <div class="form_field">
+        <label for="selectedTable" class="form_label">Select how many posts to load</label>
         <select class="input_select" id="selected_table" name="selectedTable" ng-model="selectedPipe.selectedTableId">
             <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.labelPlural || table.name}}</option>
         </select>
     </div>
+    <label for="outputFormat" class="form_label">Select output format</label>
     <div class="form_field">
         <label>
         	<input type="radio" name="outputFormat" value="JSON" ng-model="selectedPipe.outputFormat" />
