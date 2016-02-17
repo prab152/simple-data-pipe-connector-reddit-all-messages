@@ -17,6 +17,7 @@
         <select class="input_select" id="selected_table" name="selectedTable" ng-model="selectedPipe.selectedTableId">
             <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.labelPlural || table.name}}</option>
         </select>
+        <br>
         <label>
         	<input type="radio" name="outputFormat" value="JSON" ng-model="selectedPipe.outputFormat" />
         	JSON
