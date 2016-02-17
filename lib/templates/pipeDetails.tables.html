@@ -1,0 +1,34 @@
+<section class="layout_section theme_light">
+
+  <h1 class="type_heading" id="toc_0">
+    <mark class="type_mark">Filter data</mark>
+  </h1>
+  
+</section>
+
+<section class="layout_section">
+
+<p class="type_copy">
+	Select how many posts to load.
+</p>
+
+<div class="form_standard">
+    <div class="form_field">
+        <select class="input_select" id="selected_table" name="selectedTable" ng-model="selectedPipe.selectedTableId">
+            <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.labelPlural || table.name}}</option>
+        </select>
+        <label>
+        	<input type="radio" name="outputFormat" value="JSON" ng-model="selectedPipe.outputFormat" />
+        	JSON
+    	</label>
+    	<label>
+        	<input type="radio" name="outputFormat" value="JSON_flat" ng-model="selectedPipe.outputFormat" checked/>
+        	JSON flattened (for processing with Analytics for Apache Spark)
+    	</label>
+
+    </div>
+</div>
+
+<page-button-bar connect="false" nextPageTab="scheduling"/>
+
+</section>
