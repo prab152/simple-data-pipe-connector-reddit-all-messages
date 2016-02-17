@@ -14,13 +14,17 @@
     <p class="type_copy">Select how much data to load and output format</p>
 
     <div class="form_field">
-        <label for="selectedTable" class="form_label">Select how many posts to load</label>
-        <select class="input_select" id="selected_table" name="selectedTable" ng-model="selectedPipe.selectedTableId">
-            <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.labelPlural || table.name}}</option>
-        </select>
+        <label for="selectedTable" class="form_label">Posts to load</label>
+        <ul style="list-style: none;">
+            <li>
+                <select class="input_select" id="selected_table" name="selectedTable" ng-model="selectedPipe.selectedTableId">
+                    <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.labelPlural || table.name}}</option>
+                </select>
+            </li>
+        </ul>
     </div>
     <div class="form_field">
-        <label for="outputFormat" class="form_label">Select output format</label>
+        <label for="outputFormat" class="form_label">Output format</label>
         <ul style="list-style: none;">
             <li>
                 <label>
