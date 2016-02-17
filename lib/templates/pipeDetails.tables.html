@@ -8,10 +8,6 @@
 
 <section class="layout_section">
 
-<p class="type_copy">
-	Select how many posts to load.
-</p>
-
 <div class="form_standard">
     <div class="form_field">
         <label for="selectedTable" class="form_label">Select how many posts to load</label>
@@ -19,18 +15,22 @@
             <option ng-repeat="table in getTablesList()" value="{{table.name}}" ng-click="selectTable(table)">{{table.labelPlural || table.name}}</option>
         </select>
     </div>
-    <label for="outputFormat" class="form_label">Select output format</label>
     <div class="form_field">
-        <label>
-        	<input type="radio" name="outputFormat" value="JSON" ng-model="selectedPipe.outputFormat" />
-        	JSON
-    	</label>
-    </div>
-    <div class="form_field">        
-    	<label>
-        	<input type="radio" name="outputFormat" value="JSON_flat" ng-model="selectedPipe.outputFormat"/>
-        	JSON flattened (for processing with Analytics for Apache Spark)
-    	</label>
+        <label for="outputFormat" class="form_label">Select output format</label>
+        <ul class="list-style: none;">
+            <li>
+                <label>
+                	<input type="radio" name="outputFormat" value="JSON" ng-model="selectedPipe.outputFormat" />
+                	JSON
+            	</label>
+            </li>
+            <li>
+            	<label>
+                	<input type="radio" name="outputFormat" value="JSON_flat" ng-model="selectedPipe.outputFormat"/>
+                	JSON flattened (for processing with Analytics for Apache Spark)
+            	</label>
+            </li>
+        </ul>
     </div>
 </div>
 
