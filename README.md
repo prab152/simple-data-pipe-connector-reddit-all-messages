@@ -40,6 +40,78 @@ To configure and run a pipe
   ```  
   https://www.reddit.com/r/IAmA/comments/3ilzey/were_a_bunch_of_developers_from_ibm_ask_us/
   ```  
+5. Choose the desired output format. 
+
+ ###### JSON 
+
+ ```JSON
+{
+  "..." : "...",
+  "text": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
+  "emotion_tone": {
+    "category_name": "Emotion Tone",
+    "tones": [
+      {
+        "score": 0.045,
+        "tone_id": "anger",
+        "tone_name": "Anger",
+        "normalized_score": "4.5"
+      },
+      { "..." : "..."} 
+    ]
+  },
+  "writing_tone": {
+    "category_name": "Writing Tone",
+    "tones": [
+      {
+        "score": 0.7810,
+        "tone_id": "analytical",
+        "tone_name": "Analytical",
+        "normalized_score": "78.10"
+      },
+      { "..." : "..."} 
+    ]
+  },
+  "social_tone": {
+    "category_name": "Social Tone",
+    "tones": [
+      {
+        "score": 0.0330,
+        "tone_id": "openness_big5",
+        "tone_name": "Openness",
+        "normalized_score": "3.30"
+      },
+      { "..." : "..."} ,
+    ]
+  },
+  "..." : "..."
+}
+```
+
+ ###### JSON flattened (a condensed version that does not contain nested properties)
+
+ ```JSON
+{
+  "..." : "...",
+  "text": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
+  "Anger": "4.50",
+  "Disgust": "18.22",
+  "Fear": "31.70",
+  "Joy": "30.16",
+  "Sadness": "15.42",
+  "Analytical": "78.10",
+  "Confident": "96.40",
+  "Tentative": "74.50",
+  "Openness": "3.30",
+  "Conscientiousness": "2.00",
+  "Extraversion": "81.00",
+  "Agreeableness": "69.40",
+  "Emotional_Range": "97.60",
+  "..." : "..."
+}
+```
+
+
 
 #### License 
 
