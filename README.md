@@ -27,7 +27,11 @@ This connector requires the [Watson Tone Analyzer service](https://console.ng.bl
 
 ##### Install the Reddit connector
 
-  When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the package.json file: `"simple-data-pipe-connector-reddit": "^0.1.1",`
+  When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the package.json file: 
+  
+  ````
+  "simple-data-pipe-connector-reddit": "^0.1.1",
+  ````
 
 ### Using the Reddit Connector 
 To configure and run a pipe
