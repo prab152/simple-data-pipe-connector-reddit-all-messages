@@ -1,6 +1,6 @@
 {
   "name": "simple-data-pipe-connector-reddit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reddit connector for Simple Data Pipe",
   "main": "./lib",
   "scripts": {},
