@@ -2,6 +2,9 @@
 
 [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for [Reddit Ask Me Anything](https://www.reddit.com/r/ama). This connector fetches a limited number of Reddit comments for a post, uses the [Watson Tone Analyzer API](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/tone-analyzer/api/v3/) to determine the sentiment and stores the results using the [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) in Cloudant. 
 
+Sample use-case:
+[Analyze Reddit comments using Apache Spark](https://developer.ibm.com/clouddataservices/2016/03/10/sentiment-analysis-of-reddit-amas/)
+
 Need to load data from other sources? Check out the [connector repository](https://developer.ibm.com/clouddataservices/simple-data-pipe-connectors/).
 
 ### Pre-requisites
