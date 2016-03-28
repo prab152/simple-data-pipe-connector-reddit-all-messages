@@ -2,7 +2,7 @@
 
 [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for [Reddit Ask Me Anything](https://www.reddit.com/r/ama). This connector fetches top level comments or all comments and replies for a post, uses the [Watson Tone Analyzer API](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/tone-analyzer/api/v3/) to determine the sentiment and stores the results using the [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) in Cloudant. 
 
-The data property for the selected article and every comment in the comment tree (if selected) is retrieved and stored in Cloudant (See [https://www.reddit.com/dev/api](https://www.reddit.com/dev/api) for more information).
+The data property for the selected article and each comment is retrieved and stored in Cloudant (See [https://www.reddit.com/dev/api](https://www.reddit.com/dev/api) for more information).
 Since every comment in the comment tree is retrieved and stored individually the replies property for each document is not stored in Cloudant.
 Two additional properties are added to each document:
  
@@ -98,7 +98,6 @@ This connector requires the [Watson Tone Analyzer service](https://console.ng.bl
  4. Assign an application **name** and enter an optional **description**.
  5. As _redirect URL_ enter `https://<simple-data-...mybluemix.net>/authCallback`.
    > Replace `<simple-data-...mybluemix.net>` with the fully qualified host name of your Simple Data Pipe application on Bluemix.
-
  6. Click **create app**.
  7. Copy the application id displayed under your application name (e.g. vv5ulJR3...20Q) and the secret (e.g. j60....CFSyAmSY).
 
@@ -115,14 +114,14 @@ To configure and run a pipe
   ```  
   https://www.reddit.com/r/IAmA/comments/3ilzey/were_a_bunch_of_developers_from_ibm_ask_us/
   ```  
-6. Choose the desired output format. 
+6. Choose the desired output format (the properties listed below under _body_ will be added to each document). 
 
  ###### JSON 
 
  ```JSON
 {
   "..." : "...",
-  "text": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
+  "body": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
   "emotion_tone": {
     "category_name": "Emotion Tone",
     "tones": [
@@ -168,7 +167,7 @@ To configure and run a pipe
  ```JSON
 {
   "..." : "...",
-  "text": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
+  "body": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
   "Anger": "4.50",
   "Disgust": "18.22",
   "Fear": "31.70",
