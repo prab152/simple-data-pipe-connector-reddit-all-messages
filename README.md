@@ -59,6 +59,9 @@ Need to load data from other sources? Check out the [connector repository](https
 
 ### Pre-requisites
 
+##### General 
+ A valid reddit user id is required to use this connector.
+
 ##### Deploy the Simple Data Pipe
 
   [Deploy the Simple Data Pipe in Bluemix](https://github.com/ibm-cds-labs/simple-data-pipe) using the Deploy to Bluemix button or manually.
@@ -83,21 +86,36 @@ This connector requires the [Watson Tone Analyzer service](https://console.ng.bl
   When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the package.json file: 
   
   ````
-  "simple-data-pipe-connector-reddit": "^0.1.2",
+  "simple-data-pipe-connector-reddit-all-messages": "^0.1.2",
   ````
+
+##### Enable OAuth support and collect connectivity information
+
+ You need to register the Simple Data Pipe application before you can use it to load data.
+ 1. Open the [reddit](http://www.reddit.com) web page and log in.
+ 2. Click **Preferences** and select the **apps** tab.
+ 3. **Create another app...**
+ 4. Assign an application **name** and enter an optional **description**.
+ 5. As _redirect URL_ enter `https://<simple-data-...mybluemix.net>/authCallback`.
+   > Replace `<simple-data-...mybluemix.net>` with the fully qualified host name of your Simple Data Pipe application on Bluemix.
+
+ 6. Click **create app**.
+ 7. Copy the application id displayed under your application name (e.g. vv5ulJR3...20Q) and the secret (e.g. j60....CFSyAmSY).
+
 
 ### Using the Reddit Connector 
 To configure and run a pipe
 
 1. Open the Simple Data Pipe web console.
 2. Select __Create A New Pipe__.
-3. Select __Reddit AMA__ for the __Type__ when creating a new pipe  
-4. In the Connect page, enter the __URL__ taken from the Reddit AMA URL, for example
+3. Select __Reddit AMA - All Messages__ for the __Type__ when creating a new pipe  
+4. In the _Connect_ page, enter the _application id_ and _secret_ from the reddit app preferences page.
+5. In the Connect page, enter the __URL__ taken from the Reddit AMA URL, for example
 
   ```  
   https://www.reddit.com/r/IAmA/comments/3ilzey/were_a_bunch_of_developers_from_ibm_ask_us/
   ```  
-5. Choose the desired output format. 
+6. Choose the desired output format. 
 
  ###### JSON 
 

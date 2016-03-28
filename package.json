@@ -1,15 +1,15 @@
 {
-  "name": "simple-data-pipe-connector-reddit",
+  "name": "simple-data-pipe-connector-reddit-all-messages",
   "version": "0.1.2",
   "description": "Reddit connector for Simple Data Pipe",
   "main": "./lib",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-reddit"
+    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-reddit-all-messages"
   },
   "simple_data_pipe": {
-    "name": "reddit",
+    "name": "reddit_all_messages",
     "service_dependencies": [
       {
         "service_name"  : "tone_analyzer",
@@ -39,7 +39,7 @@
   "author": "david_taieb@us.ibm.com",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-reddit/issues"
+    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-reddit-all-messages/issues"
   },
   "readmeFilename": "README.md"
 }
