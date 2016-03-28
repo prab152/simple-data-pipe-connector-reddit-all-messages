@@ -2,7 +2,7 @@
 
 [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for [Reddit Ask Me Anything](https://www.reddit.com/r/ama). This connector fetches top level comments or all comments and replies for a post, uses the [Watson Tone Analyzer API](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/tone-analyzer/api/v3/) to determine the sentiment and stores the results using the [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) in Cloudant. 
 
-The data property for the selected article and each comment is retrieved and stored in Cloudant (See [https://www.reddit.com/dev/api](https://www.reddit.com/dev/api) for more information).
+The data property for the selected post and each comment is retrieved and stored in Cloudant (See [https://www.reddit.com/dev/api](https://www.reddit.com/dev/api) for more information).
 Since every comment in the comment tree is retrieved and stored individually the replies property for each document is not stored in Cloudant.
 Two additional properties are added to each document:
  
@@ -91,7 +91,7 @@ This connector requires the [Watson Tone Analyzer service](https://console.ng.bl
 
 ##### Enable OAuth support and collect connectivity information
 
- You need to register the Simple Data Pipe application before you can use it to load data.
+ You need to register the Simple Data Pipe application with Reddit before you can use it to load data.
  1. Open the [reddit](http://www.reddit.com) web page and log in.
  2. Click **Preferences** and select the **apps** tab.
  3. **Create another app...**
@@ -103,13 +103,14 @@ This connector requires the [Watson Tone Analyzer service](https://console.ng.bl
 
 
 ### Using the Reddit Connector 
-To configure and run a pipe
+To configure and run a pipe:
 
 1. Open the Simple Data Pipe web console.
 2. Select __Create A New Pipe__.
-3. Select __Reddit AMA - All Messages__ for the __Type__ when creating a new pipe  
+3. Select __Reddit AMA - All Messages__ for the __Type__ when creating a new pipe. 
 4. In the _Connect_ page, enter the _application id_ and _secret_ from the reddit app preferences page.
 5. In the _Filter Data_ page, enter the __URL__ taken from the Reddit AMA URL, for example
+
   ```  
   https://www.reddit.com/r/IAmA/comments/3ilzey/were_a_bunch_of_developers_from_ibm_ask_us/
   ```  
