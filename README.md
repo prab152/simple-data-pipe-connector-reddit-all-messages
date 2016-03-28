@@ -86,7 +86,7 @@ This connector requires the [Watson Tone Analyzer service](https://console.ng.bl
   When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the package.json file: 
   
   ````
-  "simple-data-pipe-connector-reddit-all-messages": "^0.1.2",
+  "simple-data-pipe-connector-reddit-all-messages": "git://github.com/ibm-cds-labs/simple-data-pipe-connector-reddit-all-messages.git",
   ````
 
 ##### Enable OAuth support and collect connectivity information
