@@ -109,19 +109,17 @@ To configure and run a pipe
 2. Select __Create A New Pipe__.
 3. Select __Reddit AMA - All Messages__ for the __Type__ when creating a new pipe  
 4. In the _Connect_ page, enter the _application id_ and _secret_ from the reddit app preferences page.
-5. In the Connect page, enter the __URL__ taken from the Reddit AMA URL, for example
-
+5. In the _Filter Data_ page, enter the __URL__ taken from the Reddit AMA URL, for example
   ```  
   https://www.reddit.com/r/IAmA/comments/3ilzey/were_a_bunch_of_developers_from_ibm_ask_us/
   ```  
-6. Choose the desired output format (the properties listed below under _body_ will be added to each document). 
+6. Choose the desired output format (the properties listed below will be added to each document stored in Cloudant). 
 
  ###### JSON 
 
  ```JSON
 {
   "..." : "...",
-  "body": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
   "emotion_tone": {
     "category_name": "Emotion Tone",
     "tones": [
@@ -167,7 +165,6 @@ To configure and run a pipe
  ```JSON
 {
   "..." : "...",
-  "body": "For someone wanting to enter the tech world such as myself, what do you recommend to a college freshman? I'm thinking web development, but I'm not too sure. What's your advice?",
   "Anger": "4.50",
   "Disgust": "18.22",
   "Fear": "31.70",
